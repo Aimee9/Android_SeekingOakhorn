@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.epicodus.seekingoakhorn.R;
+import com.epicodus.seekingoakhorn.model.Location;
 
 public class AdventureActivity extends AppCompatActivity {
 
@@ -13,5 +14,6 @@ public class AdventureActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adventure);
+
     }
 }

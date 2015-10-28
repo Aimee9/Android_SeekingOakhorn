@@ -10,14 +10,15 @@
                 android:background="@android:color/black">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Top Text"
         android:id="@+id/topText"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textColor="#ffeaef"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:gravity="center"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -26,7 +27,8 @@
         android:src="@drawable/creatures"
         android:layout_marginTop="60dp"
         android:layout_below="@+id/topText"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"/>
 
     <TextView
         android:layout_width="wrap_content"
