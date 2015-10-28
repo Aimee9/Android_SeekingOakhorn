@@ -14,6 +14,4 @@ public class AdventureActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adventure);
     }
-
-
 }
