@@ -33,6 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = mPreferences.edit();
                 editor.putString("username", name);
                 editor.commit();
+                mNameText.getText().clear();
                 Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                 startActivity(intent);
             }

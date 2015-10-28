@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private User mUser;
     private TextView mUserName;
     private Button mLogoutButton;
+    private Button mStartButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,28 @@ public class MainActivity extends AppCompatActivity {
     mPreferences = getApplicationContext().getSharedPreferences("SeekingOakhorn", Context.MODE_PRIVATE);
     mUserName = (TextView)findViewById(R.id.userNameText);
     mLogoutButton = (Button)findViewById(R.id.logoutButton);
+    mStartButton = (Button) findViewById(R.id.newButton);
 
+        mStartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AdventureActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+        mLogoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences preferences = getSharedPreferences("SeekingOakhorn", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.clear();
+                editor.commit();
+                finish();
+            }
+        });
 
         if (!isRegistered()) {
             Intent intent = new Intent(this, RegisterActivity.class);
@@ -55,16 +77,8 @@ public class MainActivity extends AppCompatActivity {
             mUser.save();
         }
 
-        mLogoutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SharedPreferences preferences = getSharedPreferences("SeekingOakhorn", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = preferences.edit();
-                editor.clear();
-                editor.commit();
-                finish();
-            }
-        });
+
     }
+
 
 }
