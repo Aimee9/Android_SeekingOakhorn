@@ -14,9 +14,9 @@
         android:layout_height="wrap_content"
         android:text="Continue Previous Wanderings"
         android:id="@+id/savedGameButton"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/newButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"/>
+        android:layout_marginTop="34dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -64,7 +64,15 @@
         android:text="Start New Wanderings"
         android:id="@+id/newButton"
         android:layout_below="@+id/introText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="57dp"/>
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:id="@+id/logoutButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

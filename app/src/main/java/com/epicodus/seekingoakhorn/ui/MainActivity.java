@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.epicodus.seekingoakhorn.R;
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences mPreferences;
     private User mUser;
     private TextView mUserName;
+    private Button mLogoutButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     mPreferences = getApplicationContext().getSharedPreferences("SeekingOakhorn", Context.MODE_PRIVATE);
     mUserName = (TextView)findViewById(R.id.userNameText);
+    mLogoutButton = (Button)findViewById(R.id.logoutButton);
 
 
         if (!isRegistered()) {
@@ -50,7 +54,17 @@ public class MainActivity extends AppCompatActivity {
             mUserName.setText(username);
             mUser.save();
         }
-    }
 
+        mLogoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences preferences = getSharedPreferences("SeekingOakhorn", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.clear();
+                editor.commit();
+                finish();
+            }
+        });
+    }
 
 }
