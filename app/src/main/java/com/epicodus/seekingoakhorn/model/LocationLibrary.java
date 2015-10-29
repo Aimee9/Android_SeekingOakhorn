@@ -34,7 +34,7 @@ public class LocationLibrary {
         mLocations[2] = new Location(
                 "Roar! A Firebreathing Dragon!",
                 R.drawable.dragon,
-                "You need water to stop his fire.  Then you can get his spit.",
+                "You need water to stop his fire.  Then you can get a scale.",
                 new Choice(2),
                 new Choice(2),
                 new Choice(2),
@@ -61,7 +61,7 @@ public class LocationLibrary {
         mLocations[5] = new Location(
                 "Dry Well",
                 R.drawable.well,
-                "You got a bucket!  Too bad there is no water here to fill it",
+                "You got a bucket!  Too bad there is no water here to fill it.",
                 new Choice(5),
                 new Choice(5),
                 new Choice(5),
@@ -115,7 +115,7 @@ public class LocationLibrary {
         mLocations[11] = new Location(
                 "Wizard",
                 R.drawable.wizard,
-                "You find a wizard intent on his studies.  He looks up when you walk in and knows immediately what you need.  He tells you to bring him dragon spit and lead and he can make a golden key for you.",
+                "You find a wizard intent on his studies.  He looks up when you walk in and knows immediately what you need.  He tells you to bring him a dragon scale and lead and he can make a golden key for you.",
                 new Choice(11),
                 new Choice(11),
                 new Choice(11),

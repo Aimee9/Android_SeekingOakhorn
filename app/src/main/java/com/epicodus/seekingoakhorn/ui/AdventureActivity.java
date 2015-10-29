@@ -14,9 +14,15 @@ import com.epicodus.seekingoakhorn.model.LocationLibrary;
 public class AdventureActivity extends AppCompatActivity {
 
     private LocationLibrary mLocationLibrary = new LocationLibrary();
-    private  TextView mTitleText;
+    private TextView mTitleText;
     private ImageView mImageView;
     private TextView mDescriptionText;
+
+    private ImageView mEmptyBucket;
+    private ImageView mFilledBucket;
+    private ImageView mDragonScale;
+    private ImageView mLeadBar;
+    private ImageView mGoldenKey;
 
     private Button mNorthButton;
     private Button mEastButton;
@@ -29,16 +35,28 @@ public class AdventureActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adventure);
 
-        mTitleText = (TextView)findViewById(R.id.titleText);
-        mImageView = (ImageView)findViewById(R.id.mainImage);
-        mDescriptionText = (TextView)findViewById(R.id.descriptionText);
+        mTitleText = (TextView) findViewById(R.id.titleText);
+        mImageView = (ImageView) findViewById(R.id.mainImage);
+        mDescriptionText = (TextView) findViewById(R.id.descriptionText);
 
-        mNorthButton = (Button)findViewById(R.id.northButton);
-        mEastButton = (Button)findViewById(R.id.eastButton);
-        mSouthButton = (Button)findViewById(R.id.southButton);
-        mWestButton = (Button)findViewById(R.id.westButton);
+        mEmptyBucket = (ImageView) findViewById(R.id.emptyBucketImage);
+        mFilledBucket = (ImageView) findViewById(R.id.filledBucketImage);
+        mDragonScale = (ImageView)findViewById(R.id.scaleImage);
+        mLeadBar = (ImageView) findViewById(R.id.leadImage);
+        mGoldenKey = (ImageView) findViewById(R.id.keyImage);
+
+        mNorthButton = (Button) findViewById(R.id.northButton);
+        mEastButton = (Button) findViewById(R.id.eastButton);
+        mSouthButton = (Button) findViewById(R.id.southButton);
+        mWestButton = (Button) findViewById(R.id.westButton);
 
         loadLocation(0);
+        mEmptyBucket.setVisibility(View.INVISIBLE);
+        mFilledBucket.setVisibility(View.INVISIBLE);
+        mDragonScale.setVisibility(View.INVISIBLE);
+        mLeadBar.setVisibility(View.INVISIBLE);
+        mGoldenKey.setVisibility(View.INVISIBLE);
+
     }
 
 
@@ -49,6 +67,11 @@ public class AdventureActivity extends AppCompatActivity {
         mTitleText.setText(mCurrentLocation.getTitle());
         mImageView.setImageResource(mCurrentLocation.getImage());
         mDescriptionText.setText(mCurrentLocation.getDescription());
+
+        if(mCurrentLocation.isBucket()) {
+            mEmptyBucket.setVisibility(View.VISIBLE);
+
+        }
 
         mNorthButton.setOnClickListener(new View.OnClickListener() {
             @Override

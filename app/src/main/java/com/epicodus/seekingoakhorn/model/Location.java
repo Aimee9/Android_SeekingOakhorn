@@ -11,6 +11,7 @@ public class Location {
     private Choice mEast;
     private Choice mSouth;
     private Choice mWest;
+    private boolean mIsBucket;
 
     public Location(String title, int image, String description, Choice north, Choice east, Choice south, Choice west) {
         mTitle = title;
@@ -21,6 +22,15 @@ public class Location {
         mSouth = south;
         mWest = west;
     }
+
+    public boolean isBucket() {
+        return mIsBucket;
+    }
+
+    public void getBucket(boolean isBucket) {
+        mIsBucket = isBucket;
+    }
+
 
     public String getTitle() {
         return mTitle;

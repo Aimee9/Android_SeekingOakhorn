@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         User user = User.find(username);
         if(user !=null) {
             mUser = user;
+            mUserName.setText(username);
         } else {
             mUser = new User(username);
             mUserName.setText(username);

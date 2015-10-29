@@ -132,9 +132,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/filledBucketImage"
-        android:layout_alignTop="@+id/emptyBucketImage"
         android:src="@drawable/filled_bucket"
-        android:layout_toStartOf="@+id/eastButton"
-        android:layout_toLeftOf="@+id/eastButton"/>
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/southButton"
+        android:layout_alignStart="@+id/southButton"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scaleImage"
+        android:src="@drawable/scale"
+        android:layout_alignTop="@+id/itemText"
+        android:layout_toRightOf="@+id/southButton"
+        android:layout_toEndOf="@+id/southButton"/>
 
 </RelativeLayout>
