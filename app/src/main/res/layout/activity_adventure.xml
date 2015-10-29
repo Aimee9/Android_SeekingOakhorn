@@ -124,8 +124,9 @@
         android:id="@+id/keyImage"
         android:src="@drawable/key"
         android:layout_alignTop="@+id/leadImage"
-        android:layout_toRightOf="@+id/mainImage"
-        android:layout_toEndOf="@+id/mainImage"/>
+        android:layout_alignRight="@+id/itemText"
+        android:layout_alignEnd="@+id/itemText"
+        android:layout_marginRight="15dp"/>
 
     <ImageView
         android:layout_width="wrap_content"
