@@ -4,18 +4,18 @@ package com.epicodus.seekingoakhorn.model;
  * Created by Guest on 10/28/15.
  */
 public class Choice {
-    private  int mNextPage;
+    private  int mNextLocation;
 
-    public Choice(int nextPage) {
-        mNextPage = nextPage;
+    public Choice(int nextLocation) {
+        mNextLocation = nextLocation;
     }
 
-    public int getNextPage() {
-        return mNextPage;
+    public int getNextLocation() {
+        return mNextLocation;
     }
 
-    public void setNextPage(int nextPage) {
-        mNextPage = nextPage;
+    public void setNextLocation(int nextLocation) {
+        mNextLocation = nextLocation;
     }
 
 }

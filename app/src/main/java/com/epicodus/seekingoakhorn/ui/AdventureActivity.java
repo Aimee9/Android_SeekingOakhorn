@@ -1,10 +1,8 @@
 package com.epicodus.seekingoakhorn.ui;
 
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -40,18 +38,49 @@ public class AdventureActivity extends AppCompatActivity {
         mSouthButton = (Button)findViewById(R.id.southButton);
         mWestButton = (Button)findViewById(R.id.westButton);
 
-    loadLocation(0);}
-
-        private void loadLocation(int choice) {
-            mCurrentLocation = mLocationLibrary.getLocation(choice);
-
-        Location location = mLocationLibrary.getLocation(0);
-
-        mTitleText.setText(location.getTitle());
-        mImageView.setImageResource(location.getImage());
-        mDescriptionText.setText(location.getDescription());
-
-
+        loadLocation(0);
     }
 
+
+    private void loadLocation(int choice) {
+        mCurrentLocation = mLocationLibrary.getLocation(choice);
+
+
+        mTitleText.setText(mCurrentLocation.getTitle());
+        mImageView.setImageResource(mCurrentLocation.getImage());
+        mDescriptionText.setText(mCurrentLocation.getDescription());
+
+        mNorthButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int nextLocation = mCurrentLocation.getNorth().getNextLocation();
+                loadLocation(nextLocation);
+            }
+        });
+
+        mEastButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int nextLocation = mCurrentLocation.getEast().getNextLocation();
+                loadLocation(nextLocation);
+            }
+        });
+
+        mSouthButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int nextLocation = mCurrentLocation.getSouth().getNextLocation();
+                loadLocation(nextLocation);
+            }
+        });
+
+        mWestButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int nextLocation = mCurrentLocation.getWest().getNextLocation();
+                loadLocation(nextLocation);
+            }
+        });
+
+    }
 }
