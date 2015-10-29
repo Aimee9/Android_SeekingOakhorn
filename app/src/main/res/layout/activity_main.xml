@@ -9,14 +9,6 @@
                 tools:context=".MainActivity"
                 android:background="@android:color/black">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Continue Previous Wanderings"
-        android:id="@+id/savedGameButton"
-        android:layout_below="@+id/newButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -43,8 +35,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/forestImage"
         android:src="@drawable/forest"
-        android:layout_marginTop="77dp"
-        android:layout_below="@+id/welcomeText"
+        android:layout_below="@+id/userNameText"
         android:layout_centerHorizontal="true"/>
 
     <TextView
@@ -63,7 +54,8 @@
         android:layout_height="wrap_content"
         android:text="Start New Wanderings"
         android:id="@+id/newButton"
-        android:layout_below="@+id/introText"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/explanationText"
         android:layout_centerHorizontal="true"/>
 
     <Button
@@ -73,6 +65,17 @@
         android:text="Logout"
         android:id="@+id/logoutButton"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="During your wanderings you picked up rumours of a poor beast trapped in the nearby woods.  Being the kindhearted adventurer you are, you decide to investigate and are pointed towards the nearby forest.  "
+        android:id="@+id/explanationText"
+        android:layout_below="@+id/introText"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:gravity="center"/>
 
 </RelativeLayout>

@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Top Text"
-        android:id="@+id/topText"
+        android:id="@+id/titleText"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textColor="#ffeaef"
@@ -25,10 +25,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/mainImage"
         android:src="@drawable/creatures"
-        android:layout_marginTop="60dp"
-        android:layout_below="@+id/topText"
-        android:layout_centerHorizontal="true"
-        android:adjustViewBounds="true"/>
+        android:layout_marginTop="24dp"
+        android:adjustViewBounds="true"
+        android:layout_below="@+id/titleText"
+        android:layout_centerHorizontal="true"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -47,9 +47,9 @@
         android:layout_height="wrap_content"
         android:text="N"
         android:id="@+id/northButton"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="150dp"
         android:background="#3e7d0d"
-        android:layout_below="@+id/descriptionText"
+        android:layout_below="@+id/mainImage"
         android:layout_centerHorizontal="true"/>
 
     <Button
@@ -106,8 +106,8 @@
         android:id="@+id/emptyBucketImage"
         android:src="@drawable/bucket"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/descriptionText"
-        android:layout_toStartOf="@+id/descriptionText"/>
+        android:layout_alignLeft="@+id/westButton"
+        android:layout_alignStart="@+id/westButton"/>
 
     <ImageView
         android:layout_width="wrap_content"
