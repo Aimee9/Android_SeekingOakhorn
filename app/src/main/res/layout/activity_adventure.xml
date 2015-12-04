@@ -20,26 +20,16 @@
         android:textSize="20sp"
         android:gravity="center"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/mainImage"
-        android:src="@drawable/creatures"
-        android:layout_marginTop="24dp"
-        android:adjustViewBounds="true"
-        android:layout_below="@+id/titleText"
-        android:layout_centerHorizontal="true"/>
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Description Text"
         android:id="@+id/descriptionText"
-        android:layout_below="@+id/mainImage"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
         android:textColor="@android:color/white"
-        android:textSize="15sp"/>
+        android:textSize="15sp"
+        android:layout_below="@+id/imageButton" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -47,10 +37,10 @@
         android:layout_height="wrap_content"
         android:text="N"
         android:id="@+id/northButton"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="123dp"
         android:background="#3e7d0d"
-        android:layout_below="@+id/mainImage"
-        android:layout_centerHorizontal="true"/>
+        android:layout_below="@+id/imageButton"
+        android:layout_centerHorizontal="true" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -145,5 +135,15 @@
         android:layout_alignTop="@+id/itemText"
         android:layout_toRightOf="@+id/southButton"
         android:layout_toEndOf="@+id/southButton"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:src="@drawable/creatures"
+        android:layout_below="@+id/titleText"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/black"
+        android:layout_marginTop="20dp" />
 
 </RelativeLayout>

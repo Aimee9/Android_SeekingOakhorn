@@ -33,8 +33,10 @@ public class LocationLibrary {
 
         mLocations[2] = new Location(
                 "Roar! A Firebreathing Dragon!",
+                R.drawable.dragon_fire,
                 R.drawable.dragon,
-                "You need water to stop his fire.  Then you can get a scale.",
+                "You need water to stop his fire.  Perhaps then you'll be able to get something from him.",
+                "The water drowns his fire out.  A scale falls off as he shakes the water off.",
                 new Choice(2),
                 new Choice(2),
                 new Choice(2),
@@ -60,8 +62,10 @@ public class LocationLibrary {
 
         mLocations[5] = new Location(
                 "Dry Well",
+                R.drawable.well_bucket,
                 R.drawable.well,
-                "You got a bucket!  Too bad there is no water here to fill it.",
+                "You come upon a well with a nice looking bucket laying near it.  That might come in handy.",
+                "You picked up the bucket!  Too bad this well is dry.  Maybe you can fill it up somewhere else.",
                 new Choice(5),
                 new Choice(5),
                 new Choice(5),
@@ -70,7 +74,9 @@ public class LocationLibrary {
         mLocations[6] = new Location(
                 "Unicorn",
                 R.drawable.caged_unicorn,
+                R.drawable.free_unicorn,
                 "The poor beast you have been seeking...a unicorn caged and locked up!  You need to get a key to let her out.",
+                "You have freed Oakhorn!  You are the best!",
                 new Choice(4),
                 new Choice(6),
                 new Choice(6),
@@ -79,7 +85,9 @@ public class LocationLibrary {
         mLocations[7] = new Location(
                 "Gnome!",
                 R.drawable.gnome,
-                "Whoops!  You surprise a gnome and he runs away.  In his haste he dropped a bar of lead.  Lucky for you.",
+                R.drawable.gnome_lead,
+                "Hey look, a gnome!  Maybe you should ask him for help?",
+                "Whoops!  You spooked him and he runs away.  In his haste, though, he dropped a bar of lead.  Lucky for you.",
                 new Choice(1),
                 new Choice(4),
                 new Choice(7),
@@ -115,7 +123,7 @@ public class LocationLibrary {
         mLocations[11] = new Location(
                 "Wizard",
                 R.drawable.wizard,
-                "You find a wizard intent on his studies.  He looks up when you walk in and knows immediately what you need.  He tells you to bring him a dragon scale and lead and he can make a golden key for you.",
+                "You find a wizard intent on his studies.  He looks up when you walk in and knows immediately what you need.  He tells you if you bring him a dragon scale and lead then he can make a golden key for you.",
                 new Choice(11),
                 new Choice(11),
                 new Choice(11),

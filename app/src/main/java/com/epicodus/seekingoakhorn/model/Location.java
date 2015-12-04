@@ -6,7 +6,9 @@ package com.epicodus.seekingoakhorn.model;
 public class Location {
     private String mTitle;
     private int mImage;
+    private int mImage2;
     private String mDescription;
+    private String mDescription2;
     private Choice mNorth;
     private Choice mEast;
     private Choice mSouth;
@@ -17,6 +19,18 @@ public class Location {
         mTitle = title;
         mImage = image;
         mDescription = description;
+        mNorth = north;
+        mEast = east;
+        mSouth = south;
+        mWest = west;
+    }
+
+    public Location(String title, int image, int image2, String description, String description2, Choice north, Choice east, Choice south, Choice west) {
+        mTitle = title;
+        mImage = image;
+        mImage2 = image2;
+        mDescription = description;
+        mDescription2 = description2;
         mNorth = north;
         mEast = east;
         mSouth = south;
@@ -46,6 +60,22 @@ public class Location {
 
     public void setImage(int image) {
         mImage = image;
+    }
+
+    public int getImage2() {
+        return mImage2;
+    }
+
+    public void setImage2(int image2) {
+        mImage2 = image2;
+    }
+
+    public String getDescription2() {
+        return mDescription2;
+    }
+
+    public void setDescription2(String description2) {
+        mDescription2 = description2;
     }
 
     public String getDescription() {

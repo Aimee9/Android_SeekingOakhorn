@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,7 +16,7 @@ public class AdventureActivity extends AppCompatActivity {
 
     private LocationLibrary mLocationLibrary = new LocationLibrary();
     private TextView mTitleText;
-    private ImageView mImageView;
+    private ImageButton mImageButton;
     private TextView mDescriptionText;
 
     private ImageView mEmptyBucket;
@@ -36,7 +37,7 @@ public class AdventureActivity extends AppCompatActivity {
         setContentView(R.layout.activity_adventure);
 
         mTitleText = (TextView) findViewById(R.id.titleText);
-        mImageView = (ImageView) findViewById(R.id.mainImage);
+        mImageButton = (ImageButton) findViewById(R.id.imageButton);
         mDescriptionText = (TextView) findViewById(R.id.descriptionText);
 
         mEmptyBucket = (ImageView) findViewById(R.id.emptyBucketImage);
@@ -65,13 +66,16 @@ public class AdventureActivity extends AppCompatActivity {
 
 
         mTitleText.setText(mCurrentLocation.getTitle());
-        mImageView.setImageResource(mCurrentLocation.getImage());
+        mImageButton.setImageResource(mCurrentLocation.getImage());
         mDescriptionText.setText(mCurrentLocation.getDescription());
 
-        if(mCurrentLocation.isBucket()) {
-            mEmptyBucket.setVisibility(View.VISIBLE);
-
-        }
+        mImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mImageButton.setImageResource((mCurrentLocation.getImage2()));
+                mDescriptionText.setText(mCurrentLocation.getDescription2());
+            }
+        });
 
         mNorthButton.setOnClickListener(new View.OnClickListener() {
             @Override
