@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ui.FinishActivity"
+    android:background="@android:color/black"
+    android:gravity="fill">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/free_unicorn"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Great Job!  You have released Oakhorn from her cage! She silently thanks you before dissappearing into the night.  I guess it&apos;s back to wandering for you."
+        android:id="@+id/someText"
+        style="@style/Ending" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Want to go back \n to the beginning?"
+        android:id="@+id/beginningText"
+        android:textColor="#fac5c5"
+        android:layout_alignBottom="@+id/robotAttackText"
+        android:layout_alignRight="@+id/someText"
+        android:layout_alignEnd="@+id/someText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Want to play another \n unicorn game?"
+        android:id="@+id/robotAttackText"
+        android:textColor="#fac5c5"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

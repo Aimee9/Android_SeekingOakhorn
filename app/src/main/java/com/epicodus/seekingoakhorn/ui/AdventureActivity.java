@@ -1,5 +1,6 @@
 package com.epicodus.seekingoakhorn.ui;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -91,8 +92,8 @@ public class AdventureActivity extends AppCompatActivity {
                     } else if (mCurrentLocation.getImage() == R.drawable.wizard && mDragonScale.getVisibility() == View.VISIBLE && mLeadBar.getVisibility() == View.VISIBLE) {
                         mGoldenKey.setVisibility(View.VISIBLE);
                     } else if (mCurrentLocation.getImage() == R.drawable.caged_unicorn && mGoldenKey.getVisibility() == View.VISIBLE) {
-                        mImageButton.setImageResource(mCurrentLocation.getImage2());
-                        mDescriptionText.setText(mCurrentLocation.getDescription2());
+                        Intent intent = new Intent(AdventureActivity.this, FinishActivity.class);
+                        startActivity(intent);
                     } else {}
                 }
 
