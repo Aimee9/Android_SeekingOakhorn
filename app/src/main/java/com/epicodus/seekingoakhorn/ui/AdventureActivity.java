@@ -69,13 +69,35 @@ public class AdventureActivity extends AppCompatActivity {
         mImageButton.setImageResource(mCurrentLocation.getImage());
         mDescriptionText.setText(mCurrentLocation.getDescription());
 
-        mImageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mImageButton.setImageResource((mCurrentLocation.getImage2()));
-                mDescriptionText.setText(mCurrentLocation.getDescription2());
-            }
-        });
+
+            mImageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (mCurrentLocation.getImage() == R.drawable.well_bucket) {
+                        mImageButton.setImageResource(mCurrentLocation.getImage2());
+                        mDescriptionText.setText(mCurrentLocation.getDescription2());
+                        mEmptyBucket.setVisibility(View.VISIBLE);
+                    } else if (mCurrentLocation.getImage() == R.drawable.gnome) {
+                        mImageButton.setImageResource(mCurrentLocation.getImage2());
+                        mDescriptionText.setText(mCurrentLocation.getDescription2());
+                        mLeadBar.setVisibility(View.VISIBLE);
+                    } else if (mCurrentLocation.getImage() == R.drawable.lake && mEmptyBucket.getVisibility() == View.VISIBLE) {
+                        mEmptyBucket.setVisibility(View.INVISIBLE);
+                        mFilledBucket.setVisibility(View.VISIBLE);
+                    } else if (mCurrentLocation.getImage() == R.drawable.dragon_fire && mFilledBucket.getVisibility() == View.VISIBLE) {
+                        mImageButton.setImageResource(mCurrentLocation.getImage2());
+                        mDescriptionText.setText(mCurrentLocation.getDescription2());
+                        mDragonScale.setVisibility(View.VISIBLE);
+                    } else if (mCurrentLocation.getImage() == R.drawable.wizard && mDragonScale.getVisibility() == View.VISIBLE && mLeadBar.getVisibility() == View.VISIBLE) {
+                        mGoldenKey.setVisibility(View.VISIBLE);
+                    } else if (mCurrentLocation.getImage() == R.drawable.caged_unicorn && mGoldenKey.getVisibility() == View.VISIBLE) {
+                        mImageButton.setImageResource(mCurrentLocation.getImage2());
+                        mDescriptionText.setText(mCurrentLocation.getDescription2());
+                    } else {}
+                }
+
+            });
+
 
         mNorthButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,3 +133,4 @@ public class AdventureActivity extends AppCompatActivity {
 
     }
 }
+
